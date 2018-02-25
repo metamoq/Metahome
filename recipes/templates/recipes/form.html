@@ -1,0 +1,11 @@
+{% for field in form %}
+    <div class="form-group" style="text-align: center; color: orange">
+        <div class="formcenter">
+            <span class="text-danger small" >{{ field.errors }}</span>
+        </div>
+        <label class="control-label centered" style="text-align: center; "> {{ field.label_tag }}</label>
+        <div class="centered" style="text-align: center;">{{ field }}</div>
+        <div class="centered" style="text-align: center;">{{ form.wlfile.label_tag }}</div>
+
+    </div>
+{% endfor %}

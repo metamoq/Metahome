@@ -1,0 +1,24 @@
+{% extends 'core/layout.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}{{ block.super }} - {% trans 'Регистрация' %}{% endblock %}
+{% block content %}
+<section class="page-section cta-inner">
+<form method="post" novalidate>
+<div class="container">
+<div class="row">
+<div class="col-xl-9 mx-auto">
+<div class="cta text-center rounded">
+
+{% csrf_token %}
+{{ form.as_p }}
+
+
+<button type="submit" class="btn btn-primary">{% trans 'Зарегистрироваться' %}</button>
+</div>
+</div>
+</div>
+</div>
+</form>
+</section>
+{% endblock %}

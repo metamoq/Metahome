@@ -1,0 +1,285 @@
+/* colors:
+fresh - 4abdac
+vermillion - fc4a1a
+sunshine - f7b733
+clean - dfdce3
+*/
+/* Backgrounds */
+.bg-fresh{
+    background-color: #4abdac;
+}
+
+.bg-white{
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Paragraphs */
+pre{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+/* Divs */
+header{
+    width: 100%;
+    height: 90vh;
+    background-repeat: no-repeat;
+    margin: 0;
+    background-size: cover;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: #dfdce3;
+}
+
+html{
+    background-color: #4abdac;
+}
+
+.post-secondary{
+    border-radius: 15px;
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.post{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.post-o{
+    margin-bottom: 30px;
+    padding: 30px;
+    padding-right: 0;
+}
+
+.col{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.col-mid{
+    text-align: center;
+}
+
+.profile-recipes-div{
+    text-align: center;
+    border: 1px solid #f7b733;
+    margin-top: 10px;
+}
+
+.div-follow{
+    margin: 15px 0 0 0;
+}
+
+.col-fol{
+    margin-top: 12px;
+}
+
+footer{
+    height: 80px;
+    color: #dfdce3;
+    background-color: #4abdac;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+/* Links */
+.nav-link:link,
+.nav-link:visited{
+    text-decoration: none;
+    color: #fff;
+    font-size: 90%;
+}
+
+.nav-link:hover,
+.nav-link:active{
+    color: #fc4a1a;
+}
+
+.link-outline-vermillion:link,
+.link-outline-vermillion:visited{
+    color: #fc4a1a;
+    width: auto;
+    border: 1px solid #fc4a1a;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.link-outline-vermillion:hover,
+.link-outline-vermillion:active{
+    color: #fff;
+    background-color: #fc4a1a;
+    border-color: #fc4a1a;
+}
+
+.new-recipe-link:link,
+.new-recipe-link:visited{
+    text-decoration: none;
+    float: right;
+    color: #f7b733;
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #f7b733;
+    border-radius: 28px;
+    padding: 7px;
+}
+
+.new-recipe-link:hover,
+.new-recipe-link:active{
+    color: #dfdce3;
+    background-color: #f7b733;
+}
+
+.link-nodec:link,
+.link-nodec:visited{
+    text-decoration: none;
+}
+
+.link-nodec:hover,
+.link-nodec:active{
+    text-decoration: none;
+}
+
+.reglog-link{
+    flex-grow: 0;
+}
+
+.foll:link,
+.foll:visited{
+    color: #333;
+}
+
+.foll:hover,
+.foll:active{
+    color: #111;
+}
+
+/* Fonts */
+.fa-cutlery{
+    font-size: 170%;
+}
+
+.fa-search{
+    font-size: 120%;
+}
+
+.color-vermillion{
+    color: #fc4a1a;
+}
+
+.color-vermillion:hover,
+.color-vermillion:active{
+    color: #fc4a1a;
+}
+
+/* Headers */
+h6{
+    color: #dfdce3;
+    font-size: 200%;
+    text-decoration: none;
+}
+
+h5{
+    margin-left:10px;
+    display: inline-block;
+}
+
+h3{
+    margin-top: 40px;
+}
+
+h4{
+    margin-bottom: 20px;
+    color: #fc4a1a;
+}
+
+h2{
+    color: #f7b733;
+    margin-top: 15px;
+    font-size: 160%;
+}
+
+.datetime{
+    float: right;
+}
+
+.found{
+    font-size: 50%;
+}
+
+/* Images */
+.post-img{
+    margin-top: 10px;
+    margin-bottom: 7px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.profile-img{
+    margin-bottom: 10px;
+    height: 150px;
+    width: 150px;
+    border-radius:50%;
+}
+
+.follow-img{
+    height: 70px;
+    width: 70px;
+    border-radius:50%;
+    margin: 10px 10px 10px 0;
+}
+
+.recipe-img{
+    width: 160px;
+    height: 160px;
+    border-radius:25%;
+}
+
+/* Inputs */
+.reg{
+    border: 1px solid #dfdce3;
+    border-radius: 5px;
+    padding: 5px 15px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* Buttons */
+.btn-outline-vermillion{
+    color: #fc4a1a;
+    border: 1px solid #fc4a1a;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #0000;
+}
+
+.btn-outline-vermillion:hover{
+    color: #fff;
+    background-color: #fc4a1a;
+}
+
+.btn-vermillion{
+    color: #fff;
+    border: 1px solid #fc4a1a;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #fc4a1a;
+}
+
+.btn-vermillion:hover{
+    color: #fff;
+    background-color: #fc3d09;
+    border: 1px solid #fc3d09;
+}

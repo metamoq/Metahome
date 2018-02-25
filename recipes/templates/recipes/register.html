@@ -1,0 +1,36 @@
+{% include 'recipes/header.html' %}
+{% load staticfiles %}
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Brush+Script" rel="stylesheet">
+<link href="{% static 'css/business-casual.css' %}" rel="stylesheet">
+<p>{{ message }}</p>
+<form method="post" action="{% url 'register' %}">
+{% csrf_token %}
+
+<label for="username">Имя</label><br>
+    <label>
+        <input type="text" name="first_name" value="{{ first_name }}">
+    </label><br>
+<label for="username">Фамилия</label><br>
+    <label>
+        <input type="text" name="last_name" value="{{ last_name }}">
+    </label><br>
+<label for="username">Ваша почта</label><br>
+    <label>
+        <input type="text" name="email" value="{{ email }}">
+    </label><br>
+<label for="username">Никнейм</label><br>
+    <label>
+        <input type="text" name="username">
+    </label><br>
+<label for="username">Пароль</label><br>
+    <label>
+        <input type="password" name="password">
+    </label><br>
+<label for="username">Подтвердите пароль</label><br>
+    <label>
+        <input type="password" name="password2">
+    </label>
+    <div>
+  <input type="submit" value="register" />
+</div>
+</form>

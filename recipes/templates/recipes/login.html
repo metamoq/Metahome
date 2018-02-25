@@ -1,0 +1,29 @@
+{% include 'recipes/header.html' %}
+{% load staticfiles %}
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Brush+Script" rel="stylesheet">
+<link href="{% static 'css/business-casual.css' %}" rel="stylesheet">
+<html>
+<head>
+<title>
+Страница входа
+</title>
+</head>
+<body>
+
+<p>{{ message }}</p>
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+
+<label for="username">Имя пользователя</label><br>
+<input type="text" name="username" value="{{ username }}"><br>
+<label for="username">Пароль</label><br>
+<input type="password" name="password">
+
+<div>
+  <input type="submit" class="btn btn-primary" value="login" />
+  <input type="hidden" class="btn btn-primary" name="next" value="{{ next }}" />
+</div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'core/layout.html' %}
+{% load i18n %}
+
+{% block title %}
+    {{ block.super }} - {% trans 'Создание новости' %}
+{% endblock %}
+{% block content %}
+<form method="post" novalidate>
+<section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="card-body text-center rounded">
+              <h2 class="section-heading mb-4">
+                <h1>{% trans 'Форма создания новости' %}</h1>
+                    <form method="post" novalidate>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn-primary">{% trans 'Сохранить' %}</button>
+                    </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </form>
+{% endblock %}

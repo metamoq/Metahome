@@ -1,0 +1,39 @@
+ {% extends 'core/layout.html' %}
+ {% load i18n %}
+ {% load static%}
+     <h1></h1>
+
+
+
+ {% block content %}
+
+
+    <!-- Navigation -->
+    <section class="page-section about-heading">
+      <div class="container">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0"  src="{% static 'images/dsa.jpg'%}" alt="">
+        <div class="about-heading-content">
+          <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto">
+              <div class="bg-faded rounded p-5">
+                <h2 class="section-heading mb-4">
+                  <span class="section-heading-upper">Боль-вопрос силы духа!</span>
+                  <span class="section-heading-lower">Информация о нашем сайте</span>
+                  <span class="section-heading-upper">Я сидел сутками, над разработкой этого сайта, по началу у меня слетал linux после обновлений ядра, потом после преключения между операционками,приходилось чинить с live cd, затем не было активационного кода для PyCharm и это на сутки приостановило процесс, постоянные ошибки и сбои доводили до истерики, а самое что смешное это всё, что я смог сделать </span>
+                   <span class="section-heading-upper">«Успех в жизни – не столько вопрос таланта и возможностей, сколько концентрации и настойчивости.» – C. W. Wendte</span>
+                    <span class="section-heading-upper">«Существует два способа составления программ: первый состоит в том, чтобы сделать её настолько простой, чтобы в ней явно не было ошибок; второй – в том, чтобы сделать её настолько сложной, чтобы в ней не было явных ошибок.» – C. A. R. Hoare</span>
+                    </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright &copy; CookWiki 2018</p>
+      </div>
+    </footer>
+
+  {% endblock %}

@@ -1,0 +1,47 @@
+[
+  {
+    "model": "news.News",
+    "fields": {
+      "id": 1,
+      "title": "Title 1",
+      "preview": "Preview 1",
+      "body": "Body 1"
+    }
+  },
+  {
+    "model": "news.News",
+    "fields": {
+      "id": 2,
+      "title": "Title 2",
+      "preview": "Preview 2",
+      "body": "Body 2"
+    }
+  },
+  {
+    "model": "news.News",
+    "fields": {
+      "id": 3,
+      "title": "Title 3",
+      "preview": "Preview 3",
+      "body": "Body 3"
+    }
+  },
+  {
+    "model": "news.News",
+    "fields": {
+      "id": 4,
+      "title": "Title 4",
+      "preview": "Preview 4",
+      "body": "Body 4"
+    }
+  },
+  {
+    "model": "news.News",
+    "fields": {
+      "id": 5,
+      "title": "Title 5",
+      "preview": "Preview 5",
+      "body": "Body 5"
+    }
+  }
+]

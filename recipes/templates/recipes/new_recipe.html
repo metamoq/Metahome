@@ -1,0 +1,85 @@
+{% include 'recipes/header.html' %}
+<html>
+{% load i18n %}
+{% load staticfiles %}
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Brush+Script" rel="stylesheet">
+<link href="{% static 'css/business-casual.css' %}" rel="stylesheet">
+<head>
+<title>
+Cтраница входа
+</title>
+</head>
+{% if user.is_authenticated %}
+<body>
+
+<p>{{ message }}</p>
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-2">Создайте здесь ваш рецепт</span></h1>
+<form method="post" action="{% url 'new_recipe' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'recipes/form.html' %}
+    <div class="form-group" >
+        <div class="centered" style="text-align: center">
+            <button type="submit" class="btn btn-primary" style="background-color: #f99e1a;">{% trans 'Опубликовать' %}</button>
+        </div>
+    </div>
+</form>
+{% endif %}
+
+
+<script type="text/javascript">
+var amount = 0;
+
+function append(){
+	amount++;
+    var div = document.createElement('div');
+	div.id = 'ingredient'+amount;
+    div.innerHTML =
+        '<select class="btn btn-primary" name="unit'+amount+'"><option value="g" class="btn btn-primary">g</option><option value="ml" class="btn btn-primary">ml</option><option value="tb" class="btn btn-primary">tb</option><option value="tb" class="btn btn-primary">ts</option></select><input type="text" name="ingredient'+amount+'"><input type="button" value="remove" class="btn btn-primary" onclick="deleteLast('+amount+')">';
+
+    document.getElementById('ingredients').appendChild(div);
+}
+
+function deleteLast(number){
+	document.getElementById('ingredients').removeChild(document.getElementById('ingredient'+number));
+}
+
+
+function auto_grow(element) {
+	var lengthLimits = [10, 200];
+	var maxheight = 20;
+	var text = element.value;
+	var rows = text.split("\n");
+	var height = rows.length;
+	var length = 0;
+	var extraheight = 0;
+	for(var x = 0; x < height; x++){	
+		words = rows[x].split(" ");
+		length = Math.max(length, rows[x].length - words.length + 1);
+		var currentRowLength = 0;
+		var wordNumber = 0;
+		while(wordNumber < words.length){
+			do{
+				currentRowLength = currentRowLength + words[wordNumber].length;
+				if(currentRowLength >= lengthLimits[1]){
+					extraheight++;
+					currentRowLength = words[wordNumber].length
+				}
+				wordNumber++;
+			}while(currentRowLength < lengthLimits[1] && wordNumber < words.length);
+		}
+		
+
+	}
+	height = height + extraheight;
+	if(length < lengthLimits[1])	
+		element.cols = Math.max(length + 10,lengthLimits[0]);	
+	element.rows = Math.min(height+1, maxheight);
+}
+
+
+append();
+</script>
+</body>
+</html>
+

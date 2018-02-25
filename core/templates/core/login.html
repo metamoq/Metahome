@@ -1,0 +1,28 @@
+{% extends 'core/layout.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}{{ block.super }} - {% trans 'Вход' context 'auth' %}{% endblock %}
+{% block content %}
+
+
+ <form method="post" novalidate>
+     <section class="page-section cta-inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta text-center rounded">
+                {% csrf_token %}
+                {{ form.as_p }}
+                    <div class="form-actions">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      <div class="cta text-center rounded">
+                        <button type="submit" class="btn btn-primary">{% trans 'Вход' context 'auth' %}</button>
+                            </div>
+                </div>
+            </div>
+          </div>
+     </section>
+ </form>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% include 'recipes/header.html' %}
+<h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-2">Профиль</span></h1>
+{% load staticfiles %}
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Brush+Script" rel="stylesheet">
+<link href="{% static 'css/business-casual.css' %}" rel="stylesheet">
+
+
+{% block content %}
+        <div class="text-center" style="color: #dd4b39; font-size: 19px">
+{% if user.is_authenticated %}
+
+        <p>
+            Логин: {{ user.username }}
+        </p>
+        <p>
+            Почта: {{ user.email }}
+        </p>
+        {% if usr.firs_name %}
+            <p>
+                Имя: {{ user.first_name}}
+            </p>
+        {% else %}
+            <p>
+            <small>
+            Вы еще не добавили свое имя
+            </small>
+            </p>
+        {% endif %}
+        {% if user.last_name %}
+            <p>
+                Фамилия: {{ user.lst_name }}
+            </p>
+        {% else %}
+            <p>
+        <small>
+        Вы еще не добавили свою фамилию
+        </small>
+            </p>
+        {% endif %}
+        <p>
+            Дата регистрации: {{ user.date_joined }}
+        </p>
+
+{% else %}
+    <p> Войдите, чтобы увидеть ваш профиль</p>
+{% endif %}
+        </div>
+{% endblock %}

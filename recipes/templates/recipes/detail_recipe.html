@@ -1,0 +1,28 @@
+{% include 'recipes/header.html' %}
+<h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-2">Здесь ваши рецепты</span></h1>
+{% load staticfiles %}
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Brush+Script" rel="stylesheet">
+<link href="{% static 'css/business-casual.css' %}" rel="stylesheet">
+{% load i18n %}
+{% block title %}
+    {{ recipes.title }}
+{% endblock %}
+
+
+{% block content %}
+
+<div style="text-align: center; color: white">
+    <h1 href="{{ recipe.get_absolute_url }}detail/{{ recipe.pk }}/"><h1>{{ recipe.title }}</h1> </h1>
+<small>{{ recipe.date_created }}</small>
+{% if recipe.pic %}
+    <p> <span class="profile_text colorM"> <img style="border: 10px solid transparent" src="{{ recipe.pic.url }}" alt="avatar-img" width="540"/></span> </p>
+{% endif %}
+<h3> {{ recipe.owner|default_if_none:"---" }}</h3>
+<p>{{ recipe.ingredients }}</p>
+<p>{{ recipe.text }}</p>
+</div>
+<br><br><br>
+
+
+{% endblock %}

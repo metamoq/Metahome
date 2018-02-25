@@ -1,0 +1,49 @@
+{% extends 'core/layout.html' %}
+{% load i18n %}
+{% block title %}
+    {{ block.super }} - Новости
+{% endblock %}
+{% block nav %}
+    {% include 'core/layout.html' with active='news' %}
+{% endblock %}
+{%load static%}
+{% block content %}
+<form method="post" novalidate xmlns="http://www.w3.org/1999/html">
+    <section class="page-section cta-inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta text-center rounded">
+                <h2 class="section-heading mb-4"></h2>
+                  <ul>
+                  <h1><a href="{% url 'news:create' %}">{% trans 'Создать новость' %}</a></h1>
+
+                    {% for news in news_list %}
+                      <div class="container">
+                        <div class="row">
+                        <div class="col-xl-9 mx-auto">
+                        <div class="cta text-center rounded">
+                         <h2 class="section-heading mb-4"></h2>
+                      <div class="cta text-center rounded">{{ news.title }}</div>
+                      <div class="cta text-center rounded">{{ news.date_created }}</div>
+                      <div class="cta text-center rounded">{{ news.preview }}</div>
+                         <li class="nav-item px-lg-4">
+                             <a class="btn btn-primary btn-xl" href="{% url 'news:detail' pk=news.pk %}">{% trans 'Читать далее' %}</a>
+                                <a class="btn btn-primary btn-xl" href="{% url 'news:update' pk=news.pk %}">{% trans 'Редактировать' %}</a>
+                                <a class="btn btn-primary btn-xl" href="{% url 'news:delete' pk=news.pk %}">{% trans 'Удалить' %}</a>
+                    </div>
+                </div>
+                </ul>
+            </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+        {% endfor %}
+
+{% endblock %}
+</form>
